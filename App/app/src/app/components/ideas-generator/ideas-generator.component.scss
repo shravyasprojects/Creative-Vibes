@@ -1,0 +1,121 @@
+.ig-input-title {
+  font-size: 12px;
+  margin: 20px 20px 0;
+}
+
+.ig-input-div {
+  display: flex;
+  margin: 0 20px 10px;
+  justify-content: space-between;
+}
+
+.ig-input {
+  border: 1px solid black;
+  width: 87%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.ig-input-field {
+  width: 98%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.ig-button {
+  background-color: #613cb0;
+  color: white;
+  border-radius: 5px;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.ig-platforms {
+  display: flex;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.ig-platform {
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 10px;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ig-platform:hover {
+  border: 1px solid #613cb0;
+  background-color: #613cb0;
+  color: white;
+}
+
+.ig-active-platform {
+  padding: 10px;
+  border-radius: 10px;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #613cb0;
+  background-color: #613cb0;
+  color: white;
+}
+
+.ig-line {
+  color: gainsboro;
+  border: none;
+  height: 1px;
+  background-color: gainsboro;
+  margin: 20px 0;
+}
+
+.ig-results-title {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.ig-results-div {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.ig-result {
+  width: 45%;
+}
+
+.ig-topic {
+  margin-bottom: 20px;
+}
+
+.ig-idea {
+  margin: 10px 0;
+}
+
+.ig-generate-post {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #613cb0;
+  background-color: #613cb0;
+  color: white;
+}
+
+.ig-spinner-div {
+  display: flex;
+  justify-content: center;
+}
+
+.ig-spinner::ng-deep circle {
+  stroke: #613cb0 !important;
+}

@@ -1,0 +1,141 @@
+.cp-title {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cp-line {
+  color: gainsboro;
+  border: none;
+  height: 1px;
+  background-color: gainsboro;
+}
+
+.cp-post {
+  padding: 50px;
+}
+
+.cp-subtitle-div {
+  display: flex;
+  justify-content: space-between;
+  width: 73%;
+}
+
+.cp-subtitle-image-div {
+  display: flex;
+  gap: 10px;
+  width: 73%;
+}
+
+.cp-subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.cp-copy {
+  margin-top: 30px;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cp-input {
+  border: 1px solid black;
+  width: 73%;
+  height: 50px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.cp-input-field {
+  width: 93%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.cp-textarea {
+  border: 1px solid black;
+  width: 73%;
+  height: 200px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+.cp-textarea-field {
+  width: 95%;
+  height: 90%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.cp-image {
+  margin-top: 20px;
+  width: 500px;
+}
+
+.cp-spinner-div {
+  display: flex;
+  justify-content: center;
+}
+
+.cp-image-spinner-div {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 50px;
+}
+
+.cp-spinner::ng-deep circle {
+  stroke: #613cb0 !important;
+}
+
+.cp-hint {
+  margin-top: 30px;
+  color: grey;
+  font-size: 12px;
+}
+
+.cp-body {
+  position: relative;
+}
+
+.cp-error {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #613cb0;
+  color: white;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  width: 440px;
+}
+
+.cp-error-message {
+  margin-top: 2px;
+}
+
+.cp-error-icon {
+  font-size: 18px;
+  cursor: pointer;
+}

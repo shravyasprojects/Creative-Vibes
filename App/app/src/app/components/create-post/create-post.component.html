@@ -1,0 +1,122 @@
+<div class="cp-body">
+  <div class="cp-title" *ngIf="postType != 'MetaDescription'">
+    {{ postType }} Post
+  </div>
+  <div class="cp-title" *ngIf="postType == 'MetaDescription'">
+    Meta Description
+  </div>
+  <hr class="cp-line" />
+  <div class="cp-error" *ngIf="showError && postType != 'MetaDescription'">
+    <div class="cp-error-message">
+      Thank you for your patience. AI is generating your content.
+    </div>
+    <div class="material-symbols-outlined cp-error-icon" (click)="closeError()">
+      close
+    </div>
+  </div>
+  <div *ngIf="postType == 'Blog'" class="cp-post">
+    <div class="cp-subtitle-div">
+      <div class="cp-subtitle">Title</div>
+      <div class="cp-copy" (click)="copy('title')">Copy</div>
+    </div>
+    <div class="cp-input">
+      <input
+        *ngIf="!loadingContent"
+        type="text"
+        [(ngModel)]="result.title"
+        class="cp-input-field"
+      />
+      <div class="cp-spinner-div">
+        <mat-spinner
+          class="cp-spinner"
+          *ngIf="loadingContent"
+          diameter="25"
+        ></mat-spinner>
+      </div>
+    </div>
+    <div class="cp-subtitle-div">
+      <div class="cp-subtitle">Outline</div>
+      <div class="cp-copy" (click)="copy('outline')">Copy</div>
+    </div>
+    <div class="cp-textarea">
+      <textarea
+        *ngIf="!loadingContent"
+        [(ngModel)]="result.outline"
+        class="cp-textarea-field"
+      ></textarea>
+      <div class="cp-spinner-div">
+        <mat-spinner
+          class="cp-spinner"
+          *ngIf="loadingContent"
+          diameter="25"
+        ></mat-spinner>
+      </div>
+    </div>
+    <div class="cp-subtitle-div">
+      <div class="cp-subtitle">Content</div>
+      <div class="cp-copy" (click)="copy('content')">Copy</div>
+    </div>
+    <div class="cp-textarea">
+      <textarea
+        *ngIf="!loadingContent"
+        [(ngModel)]="result.content"
+        class="cp-textarea-field"
+      ></textarea>
+      <div class="cp-spinner-div">
+        <mat-spinner
+          class="cp-spinner"
+          *ngIf="loadingContent"
+          diameter="25"
+        ></mat-spinner>
+      </div>
+    </div>
+    <div class="cp-subtitle-image-div">
+      <div class="cp-subtitle">Images</div>
+      <div class="cp-hint">(You can right-click the image to download it.)</div>
+    </div>
+    <div class="cp-image-spinner-div" *ngIf="loadingImage">
+      <mat-spinner class="cp-spinner" diameter="50"></mat-spinner>
+    </div>
+    <img class="cp-image" src="{{ image }}" />
+  </div>
+  <div *ngIf="postType != 'Blog'" class="cp-post">
+    <div class="cp-subtitle-div">
+      <div class="cp-subtitle" *ngIf="postType != 'MetaDescription'">
+        Content
+      </div>
+      <div class="cp-subtitle" *ngIf="postType == 'MetaDescription'">
+        Meta Description
+      </div>
+      <div class="cp-copy" (click)="copy('content')">Copy</div>
+    </div>
+    <div class="cp-textarea">
+      <textarea
+        *ngIf="!loadingContent"
+        [(ngModel)]="result.content"
+        class="cp-textarea-field"
+      ></textarea>
+      <div class="cp-spinner-div">
+        <mat-spinner
+          class="cp-spinner"
+          *ngIf="loadingContent"
+          diameter="25"
+        ></mat-spinner>
+      </div>
+    </div>
+    <div *ngIf="postType != 'MetaDescription'" class="cp-subtitle-image-div">
+      <div class="cp-subtitle">Images</div>
+      <div class="cp-hint">(You can right-click the image to download it.)</div>
+    </div>
+    <div
+      *ngIf="postType != 'MetaDescription' && loadingImage"
+      class="cp-image-spinner-div"
+    >
+      <mat-spinner class="cp-spinner" diameter="50"></mat-spinner>
+    </div>
+    <img
+      *ngIf="postType != 'MetaDescription'"
+      class="cp-image"
+      src="{{ image }}"
+    />
+  </div>
+</div>

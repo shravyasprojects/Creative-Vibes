@@ -1,0 +1,67 @@
+<div class="d-main">
+  <div>
+    <div class="d-input">
+      <input
+        *ngIf="data != 'meta'"
+        type="text"
+        class="d-input-field"
+        [(ngModel)]="input"
+        placeholder="I want to create a post about personal finance."
+      />
+      <input
+        *ngIf="data == 'meta'"
+        type="text"
+        class="d-input-field"
+        [(ngModel)]="input"
+        placeholder="I want to create a meta description for personal finance."
+      />
+      <div *ngIf="error" class="error">*This field is required</div>
+    </div>
+  </div>
+  <div *ngIf="data == 'social'" class="d-platforms">
+    <div
+      [ngClass]="{
+        'd-active-platform': platform === 'Facebook',
+        'd-platform': platform != 'Facebook'
+      }"
+      (click)="selectPlatform('Facebook')"
+    >
+      Facebook
+    </div>
+    <div
+      [ngClass]="{
+        'd-active-platform': platform === 'Instagram',
+        'd-platform': platform != 'Instagram'
+      }"
+      (click)="selectPlatform('Ideas')"
+    >
+      Instagram
+    </div>
+    <div
+      [ngClass]="{
+        'd-active-platform': platform === 'Twitter',
+        'd-platform': platform != 'Twitter'
+      }"
+      (click)="selectPlatform('Twitter')"
+    >
+      Twitter
+    </div>
+  </div>
+  <div class="d-buttons">
+    <div
+      *ngIf="data != 'meta'"
+      class="d-generate-button"
+      (click)="generatePost()"
+    >
+      Generate Post
+    </div>
+    <div
+      *ngIf="data == 'meta'"
+      class="d-generate-button"
+      (click)="generatePost()"
+    >
+      Generate Meta Description
+    </div>
+    <div class="d-cancel-button" (click)="close()">Cancel</div>
+  </div>
+</div>

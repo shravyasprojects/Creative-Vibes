@@ -1,0 +1,44 @@
+<div>
+  <div class="cc-title">AI-Powered Content Creator</div>
+  <div class="cc-subtitle">
+    Unlock endless creativity with our AI-powered content creator tool. Let
+    innovation be your guide.
+  </div>
+  <div class="cc-options">
+    <div class="cc-option" (click)="redirect('ideas-generator')">
+      <div>
+        <span class="material-symbols-outlined cc-option-icon">
+          light_mode
+        </span>
+      </div>
+      <div class="cc-option-title">Content Ideas</div>
+      <div>Captivating content ideas to engage your audience.</div>
+    </div>
+    <div class="cc-option" (click)="openDialog('social')">
+      <div>
+        <span class="material-symbols-outlined cc-option-icon"> thumb_up </span>
+      </div>
+      <div class="cc-option-title">Social Media Posts</div>
+      <div>Generate captivating social media posts in seconds..</div>
+    </div>
+    <div class="cc-option" (click)="openDialog('blog')">
+      <div>
+        <span class="material-symbols-outlined cc-option-icon">
+          edit_square
+        </span>
+      </div>
+      <div class="cc-option-title">Blog Post</div>
+      <div>Unleash the power of AI for your next blog post.</div>
+    </div>
+    <div class="cc-option" (click)="openDialog('meta')">
+      <div>
+        <span class="material-symbols-outlined cc-option-icon"> code </span>
+      </div>
+      <div class="cc-option-title">Meta Description</div>
+      <div>
+        Engage your audience from the search results to your website with
+        compelling summaries tailored to your content.
+      </div>
+    </div>
+  </div>
+</div>

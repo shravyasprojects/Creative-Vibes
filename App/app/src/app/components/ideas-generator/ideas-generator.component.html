@@ -1,0 +1,75 @@
+<div>
+  <div class="ig-input-title">Enter you topic or keyword</div>
+  <div class="ig-input-div">
+    <div class="ig-input">
+      <input
+        class="ig-input-field"
+        [(ngModel)]="keyword"
+        placeholder="SEO Marketing"
+      />
+    </div>
+    <div class="ig-button" (click)="generateIdeas()">Generate Ideas</div>
+  </div>
+  <div class="ig-platforms">
+    <div
+      [ngClass]="{
+        'ig-active-platform': platform === 'Blog',
+        'ig-platform': platform != 'Blog'
+      }"
+      (click)="selectPlatform('Blog')"
+    >
+      Blog
+    </div>
+    <div
+      [ngClass]="{
+        'ig-active-platform': platform === 'Facebook',
+        'ig-platform': platform != 'Facebook'
+      }"
+      (click)="selectPlatform('Facebook')"
+    >
+      Facebook
+    </div>
+    <div
+      [ngClass]="{
+        'ig-active-platform': platform === 'Instagram',
+        'ig-platform': platform != 'Instagram'
+      }"
+      (click)="selectPlatform('Ideas')"
+    >
+      Instagram
+    </div>
+    <div
+      [ngClass]="{
+        'ig-active-platform': platform === 'Twitter',
+        'ig-platform': platform != 'Twitter'
+      }"
+      (click)="selectPlatform('Twitter')"
+    >
+      Twitter
+    </div>
+  </div>
+  <hr class="ig-line" />
+  <div class="ig-spinner-div">
+    <mat-spinner class="ig-spinner" *ngIf="loading" diameter="50"></mat-spinner>
+  </div>
+  <div *ngIf="result != undefined && !loading">
+    <div class="ig-results-title">Results</div>
+    <div class="ig-results-div">
+      <div class="ig-result" *ngFor="let topic of getTopics()">
+        <div class="ig-topic">{{ topic }}</div>
+        <div class="ig-idea" *ngFor="let idea of result[topic]">
+          <mat-radio-button (change)="selectIdea(idea)" value="{{ idea }}">{{
+            idea
+          }}</mat-radio-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="platform != '' && idea != ''"
+    class="ig-generate-post"
+    (click)="generatePost()"
+  >
+    Generate {{ platform }} Post
+  </div>
+</div>

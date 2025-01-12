@@ -1,0 +1,42 @@
+.cc-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 100px 0 10px;
+}
+
+.cc-subtitle {
+  text-align: center;
+}
+
+.cc-options {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 55px;
+  gap: 50px;
+  justify-content: center;
+}
+
+.cc-option {
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  cursor: pointer;
+}
+
+.cc-option:hover {
+  color: white;
+  background-color: #613cb0;
+  border: 2px solid #613cb0;
+}
+
+.cc-option-icon {
+  font-size: 40px;
+}
+
+.cc-option-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0;
+}
